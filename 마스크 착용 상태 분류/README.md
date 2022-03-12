@@ -99,7 +99,4 @@
 - Test
     
     ![1](https://user-images.githubusercontent.com/62659407/158011856-40af0455-ace2-4647-bf89-14015e57f169.png)
-
-    
-    - F1 Score : 0.7068
-    - Acc : 76.1587
+    - F1 Score, Acc (Public → Private)
