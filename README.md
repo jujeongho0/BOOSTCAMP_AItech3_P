@@ -8,7 +8,7 @@
         ![Untitled 2](https://user-images.githubusercontent.com/62659407/158011843-722affd8-6cdd-4ae5-bfc1-b3def7e9e4db.png)
 
 - DataSet
-    - CentrCrop을 이용해 이미지의 배경을 부분 제거 → 모델이 사람에 집중하게 함
+    - CenterCrop을 이용해 이미지의 배경을 부분 제거 → 모델이 사람에 집중하게 함
     - RandomHorizontalFlip을 이용해 이미지가 로드될 때마다 0.5 확률로 좌우 반전 → 이미지 다양성 증가
         
 - DataLoader
