@@ -8,9 +8,8 @@
         ![Untitled 2](https://user-images.githubusercontent.com/62659407/158011843-722affd8-6cdd-4ae5-bfc1-b3def7e9e4db.png)
 
 - DataSet
-    - Final
-        - CentorCrop을 이용해 이미지의 배경을 부분 제거 → 모델이 사람에 집중하게 함
-        - RandomHorizontalFlip을 이용해 이미지가 로드될 때마다 0.5 확률로 좌우 반전 → 이미지 다양성 증가
+    - CentorCrop을 이용해 이미지의 배경을 부분 제거 → 모델이 사람에 집중하게 함
+    - RandomHorizontalFlip을 이용해 이미지가 로드될 때마다 0.5 확률로 좌우 반전 → 이미지 다양성 증가
         
 - DataLoader
     - 먼저, 사람을 기준으로 4:1 비율로 Train, Test Set 나누고, 같은 사람의 다른 데이터 셋은 같은 Set으로 불러옴  → 같은 사람이 다른 Set으로 들어가게 되면 Cheating 현상이 발생할 수 있으므로
