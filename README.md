@@ -1,35 +1,9 @@
 # P stage
 
-## 1. 마스크 착용 상태 유무
 
-- Preprocess
-    - 나이의 경계를 [<30, ≥30and<55,≤55]로 변경함으로써 60대 이상의 사람의 이미지 데이터 수 증강 → Class Imbalance 완화
+### 1. 마스크 착용 상태 유무
+COVID-19의 확산으로 우리나라는 물론 전 세계 사람들은 경제적, 생산적인 활동에 많은 제약을 가지게 되었습니다. 우리나라는 COVID-19 확산 방지를 위해 사회적 거리 두기를 단계적으로 시행하는 등의 많은 노력을 하고 있습니다. 과거 높은 사망률을 가진 사스(SARS)나 에볼라(Ebola)와는 달리 COVID-19의 치사율은 오히려 비교적 낮은 편에 속합니다. 그럼에도 불구하고, 이렇게 오랜 기간 동안 우리를 괴롭히고 있는 근본적인 이유는 바로 COVID-19의 강력한 전염력 때문입니다.
 
-        ![Untitled 2](https://user-images.githubusercontent.com/62659407/158011843-722affd8-6cdd-4ae5-bfc1-b3def7e9e4db.png)
+감염자의 입, 호흡기로부터 나오는 비말, 침 등으로 인해 다른 사람에게 쉽게 전파가 될 수 있기 때문에 감염 확산 방지를 위해 무엇보다 중요한 것은 모든 사람이 마스크로 코와 입을 가려서 혹시 모를 감염자로부터의 전파 경로를 원천 차단하는 것입니다. 이를 위해 공공 장소에 있는 사람들은 반드시 마스크를 착용해야 할 필요가 있으며, 무엇 보다도 코와 입을 완전히 가릴 수 있도록 올바르게 착용하는 것이 중요합니다. 하지만 넓은 공공장소에서 모든 사람들의 올바른 마스크 착용 상태를 검사하기 위해서는 추가적인 인적자원이 필요할 것입니다.
 
-- DataSet
-    - CenterCrop을 이용해 이미지의 배경을 부분 제거 → 모델이 사람에 집중하게 함
-    - RandomHorizontalFlip을 이용해 이미지가 로드될 때마다 0.5 확률로 좌우 반전 → 이미지 다양성 증가
-        
-- DataLoader
-    - 먼저, 사람을 기준으로 4:1 비율로 Train, Test Set 나누고, 같은 사람의 다른 데이터 셋은 같은 Set으로 불러옴  → 같은 사람이 다른 Set으로 들어가게 되면 Cheating 현상이 발생할 수 있으므로
-        
-        ![Untitled 3](https://user-images.githubusercontent.com/62659407/158011851-0b9aa2dc-9ea0-431d-a3dc-22f5bd19b23a.png)
-    
-- Setting
-    - Model : resnet18               
-    - Loss : Focal Loss : 데이터가 Class Imbalance하기 때문에, 데이터가 적은 클래스는 그만큼 Loss를 크게 부여하는 Focal Loss 사용
-    - Optimizer : Adam
-    - Hyper Parameter
-        - LR : 0.00008 → 작게 할수록, 학습 시간은 오래 걸리지만 과적합이 일어나지 않고 학습이 잘 되었다.
-        - Epoch : 10
-    
-- Train / Val
-    
-  ![Untitled 4](https://user-images.githubusercontent.com/62659407/158011854-9d0be8d6-dd61-4798-b888-b90bf62796ba.png)
-    
-- Test
-    
-    ![1](https://user-images.githubusercontent.com/62659407/158011856-40af0455-ace2-4647-bf89-14015e57f169.png)
-    - F1 Score, Acc (Public → Private)
-    
+따라서, 우리는 카메라로 비춰진 사람 얼굴 이미지 만으로 이 사람이 마스크를 쓰고 있는지, 쓰지 않았는지, 정확히 쓴 것이 맞는지 자동으로 가려낼 수 있는 시스템이 필요합니다. 이 시스템이 공공장소 입구에 갖춰져 있다면 적은 인적자원으로도 충분히 검사가 가능할 것입니다.
