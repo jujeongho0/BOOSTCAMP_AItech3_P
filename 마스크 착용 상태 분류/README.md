@@ -92,11 +92,10 @@
         - LR : 0.00008 → 작게 할수록, 학습 시간은 오래 걸리지만 과적합이 일어나지 않고 학습이 잘 되었다.
         - Epoch : 10
     
-- Train / Val
-    
-  ![Untitled 4](https://user-images.githubusercontent.com/62659407/158011854-9d0be8d6-dd61-4798-b888-b90bf62796ba.png)
-    
-- Test
-    
-    ![1](https://user-images.githubusercontent.com/62659407/158011856-40af0455-ace2-4647-bf89-14015e57f169.png)
-    - F1 Score, Acc (Public → Private)
+- 최종 결과
+  
+  - Public (48팀 中 15등)
+    ![1](https://user-images.githubusercontent.com/62659407/162691502-5eab6bae-b348-4319-a303-3f17f7f724b8.png)
+
+  - Private (48팀 中 17등)
+    ![2](https://user-images.githubusercontent.com/62659407/162691530-117456f2-2170-4b6d-b412-570921a162d6.png)
