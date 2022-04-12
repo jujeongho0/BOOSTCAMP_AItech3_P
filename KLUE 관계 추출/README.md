@@ -1,4 +1,4 @@
-# KLUE 관계 추출
+# 문장 내 개체간 관계 추출
 
 - train.csv: 총 32470개
 - test_data.csv: 총 7765개
