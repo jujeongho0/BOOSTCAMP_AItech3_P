@@ -48,7 +48,7 @@
         - Grabcut을 이용해 이미지의 배경을 제거 → 모델이 사람에 집중하게 함
         
 - DataLoader
-    - 먼저, 사람을 기준으로 4:1 비율로 Train, Test Set 나누고, 같은 사람의 다른 데이터 셋은 같은 Set으로 불러옴  → 같은 사람이 다른 Set으로 들어가게 되면 Cheating 현상이 발생할 수 있으므로
+    - 먼저, 사람을 기준으로 4:1 비율로 Train, Valid Set 나누고, 같은 사람의 다른 데이터 셋은 같은 Set으로 불러옴  → 같은 사람이 다른 Set으로 들어가게 되면 Cheating 현상이 발생할 수 있으므로
         
         ![Untitled 3](https://user-images.githubusercontent.com/62659407/158011851-0b9aa2dc-9ea0-431d-a3dc-22f5bd19b23a.png)
     
